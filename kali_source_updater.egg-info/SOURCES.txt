@@ -1,0 +1,9 @@
+README.md
+setup.py
+kali-source-updater/__init__.py
+kali-source-updater/kali-source-updater.py
+kali_source_updater.egg-info/PKG-INFO
+kali_source_updater.egg-info/SOURCES.txt
+kali_source_updater.egg-info/dependency_links.txt
+kali_source_updater.egg-info/requires.txt
+kali_source_updater.egg-info/top_level.txt
