@@ -9,8 +9,7 @@ pip3 install kali-source-updater
 
 ## Requirements
 ```
-Kali Linux,
-Python3
+Python3, Kali Linux, pip3
 ```
 
 ## Usage
