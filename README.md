@@ -1,4 +1,4 @@
-<p align="center">
+<p align="left">
   <a href="https://github.com/steffinstanly/Kali-Source-Updater/releases">
     <img src="https://img.shields.io/badge/Release-v1.1-blue">
   </a>
