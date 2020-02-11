@@ -1,3 +1,13 @@
+<p align="center">
+  <a href="https://github.com/steffinstanly/Kali-Source-Updater/releases">
+    <img src="https://img.shields.io/badge/Release-v1.1-blue">
+  </a>
+  <a href="https://pypi.org/project/kali-source-updater/">
+    <img src="https://img.shields.io/badge/pypi-%40kali--source--updater-red"
+         alt="pypi">
+  </a>
+</p>
+
 # Kali-Source-Updater v1
 Python Script to change official Kali repository based on the lowest latency, there by helping in speeding up the update and upgrades of kali packages. 
 
