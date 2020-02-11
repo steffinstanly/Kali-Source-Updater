@@ -1,0 +1,3 @@
+[console_scripts]
+kali-source-updater = kali_source_updater.kali_updater:main
+
