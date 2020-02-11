@@ -7,6 +7,12 @@ Python Script to change official Kali repository based on the lowest latency, th
 pip3 install kali-source-updater
 ```
 
+## For upgrading to the latest version
+
+```
+pip3 install --upgrade kali-source-updater
+```
+
 ## Requirements
 ```
 Python3, Kali Linux, pip3
