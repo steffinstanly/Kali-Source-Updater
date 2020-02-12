@@ -31,7 +31,7 @@ Python3, Kali Linux, pip3
 ## Usage
 ```
 # kali-source-updater -h
-usage: kali-source-updater [-h] [-v] [-https] [-src]
+usage: kali-source-updater [-h] [-v] [-https] [-src] [-u]
 
 Kali ource updater selects the best kali mirror
 server and apply the configuration
@@ -39,6 +39,7 @@ server and apply the configuration
 optional arguments:
   -h, --help     show this help message and exit
   -v, --verbose  enable verbose output
+  -u, --update   for updating the system alone completely
   -https         use HTTPS in apt transport (default HTTP)
   -src           enable sources packages (default disable)
 ```
