@@ -76,12 +76,14 @@ def main():
 	parser.add_argument('-v','--verbose', help='enable verbose output', action="store_true")
 	parser.add_argument('-https', help='use HTTPS in apt transport (default HTTP)', action="store_true")
 	parser.add_argument('-src', help='enable sources packages (default disable)', action="store_true")
+	parser.add_argument('-u','--update', help='update and upgrade completely (default disable)', action="store_true")
 	args = parser.parse_args()
 
 	# Initialize arguments
 	https = True if args.https else False
 	verbose = True if args.verbose else False
 	sources = True if args.src else False
+	update = True if args.update else False
 
 	# Banner
 	print("                                                                                 ") 
@@ -114,6 +116,15 @@ def main():
 				print("\t! package "+package+" is failing to install")
 				print("\t  "+str(e))
 				sys.exit(1)
+
+	if update:
+		print("[+] Please wait unitil the update gets completed !!")
+		print("[+] Executing command --> apt-get update -y && apt-get upgrade -y && apt-get full-upgrade -y && apt-get dist-upgrade -y && apt-get autoremove -y\n")
+		os.system('apt-get update -y && apt-get upgrade -y && apt-get full-upgrade -y && apt-get dist-upgrade -y && apt-get autoremove -y')
+		print("\n")
+		print("[+] All updates and upgrades completed successfully")
+		sys.exit(1)
+
 
 	print("[+] Getting mirror list ...")
 	response = requests.get('https://http.kali.org/README.mirrorlist').text
@@ -232,15 +243,17 @@ def main():
 
 	print("[+] Done!")
  	
+	print("[+] This command would be executed --> apt-get update -y && apt-get upgrade -y && apt-get full-upgrade -y && apt-get dist-upgrade -y && apt-get autoremove -y")
 	response = ask("\t Enter [y] or [n] for running all updates, upgrades and autoremoval in the system",'n')
 
 	if response:
-		print("[+] Please wait unitil the update gets completed !!")
-		temp = "apt-get update -y && apt-get upgrade -y && apt-get full-upgrade -y && apt-get dist-upgrade -y && apt-get autoremove -y"
-		subprocess.Popen(temp, shell=True, stdout=subprocess.PIPE).stdout.read()
+		print("[+] Please wait unitil the update gets completed !!\n")
+		os.system('apt-get update -y && apt-get upgrade -y && apt-get full-upgrade -y && apt-get dist-upgrade -y && apt-get autoremove -y')
+		print("\n")
 		print("[+] All updates and upgrades completed successfully")
 	else:
 		sys.exit(1)
 
+	
 if __name__ == "__main__":
 	main()

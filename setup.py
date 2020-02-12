@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="kali-source-updater",
-    version="1.0",
+    version="1.2",
     author="Steffin Stanly",
     author_email="steffinstanly@gmail.com",
     description="A script for updating kali linux source list based on the latency",

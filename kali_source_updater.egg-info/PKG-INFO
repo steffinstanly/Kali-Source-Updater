@@ -1,16 +1,39 @@
 Metadata-Version: 2.1
 Name: kali-source-updater
-Version: 1.0
-Summary: A script for updating kali linux source list
+Version: 1.2
+Summary: A script for updating kali linux source list based on the latency
 Home-page: https://github.com/steffinstanly/Kali-Source-Updater
-Author: Steffin
+Author: Steffin Stanly
 Author-email: steffinstanly@gmail.com
 License: UNKNOWN
-Description: # Example Package
+Description: # Kali-Source-Updater v1
+        Python Script to change official Kali repository based on the lowest latency, there by helping in speeding up the update and upgrades of kali packages. 
         
-        This is a simple example package. You can use
-        [Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
-        to write your content.
+        ## Installation
+        
+        ```
+        pip3 install kali-source-updater
+        ```
+        
+        ## Requirements
+        ```
+        Python3, Kali Linux, pip3
+        ```
+        
+        ## Usage
+        ```
+        # kali-source-updater -h
+        usage: kali-source-updater [-h] [-v] [-https] [-src]
+        
+        Kali ource updater selects the best kali mirror
+        server and apply the configuration
+        
+        optional arguments:
+          -h, --help     show this help message and exit
+          -v, --verbose  enable verbose output
+          -https         use HTTPS in apt transport (default HTTP)
+          -src           enable sources packages (default disable)
+        ```
         
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
